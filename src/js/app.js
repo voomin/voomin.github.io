@@ -50,8 +50,22 @@ class App {
 
         this.heroController.draw(this.ctx, t, dots);
     }
+
+    jump() {
+        this.heroController.jump();
+    }
 }
 
+let app;
+
 window.onload = () => {
-    new App();
+    app = new App();
 }
+
+function jump() {
+    if (!app) return;    
+    app.jump();
+}
+
+window.addEventListener('click', jump);
+window.addEventListener('pointerdown', jump);

@@ -1,4 +1,9 @@
+
+const gravity = 0.5; // 중력 가속도
+const bounceFactor = 0.7; // 바운스 계수
+
 export class Hero {
+
     constructor(stageWitdh) {
         this.stageWitdh = stageWitdh;
 
@@ -7,6 +12,7 @@ export class Hero {
         this.x = stageWitdh + this.size;
         this.y = 0;
         this.speed = Math.random() * 2 + 1;
+        this.velocity = 0;
         // this.fps = 24;
         // this.fpsTime = 1000 / this.fps;
     }
@@ -89,15 +95,27 @@ export class Hero {
         this.x -= this.speed;
         if (this.x < -this.size){
             this.x = this.stageWitdh + this.size;
+            this.speed = Math.random() * 2 + 1;
         }
         const closest = this.getY(this.x, dots);
-        this.y = closest.y - this.halfSize;
+        const maxY = closest.y - this.halfSize;
+
+        this.velocity += gravity;
+        this.y += this.velocity;
+        if (this.y > maxY) {
+            this.y = maxY;
+            this.velocity *= -bounceFactor; // 
+        }
+
 
         ctx.beginPath();
         ctx.arc(this.x, this.y, 50, 0, Math.PI * 2); // (x, y, radius, startAngle, endAngle)
         ctx.fillStyle = "#00BCD4"; // 원의 색상
         ctx.fill();
         ctx.closePath();
-
     }
-}
+
+    jump() {
+        this.velocity = -15;
+    }
+}  

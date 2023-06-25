@@ -13,4 +13,8 @@ export class HeroController {
   draw(ctx, t, dots) {
     this.hero.draw(ctx, t, dots);
   }
+
+  jump() {
+    this.hero.jump();
+  }
 }
