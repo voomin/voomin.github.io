@@ -3,7 +3,7 @@ import { Hill } from "./hill";
 
 class App {
     constructor() {
-        this.canvas = document.createElement('canvas');
+        this.canvas = document.getElementById('canvas');
         this.ctx = this.canvas.getContext('2d');
         document.body.appendChild(this.canvas);
 
@@ -22,8 +22,8 @@ class App {
     }
 
     resize() {
-        this.stageWidth = document.body.clientWidth;
-        this.stageHeight = document.body.clientHeight;
+        this.stageWidth = window.innerWidth;
+        this.stageHeight = window.innerHeight;
 
         // 레티나 디스플레이에서도 선명하게 보이도록 설정
         this.canvas.width = this.stageWidth * 2;
