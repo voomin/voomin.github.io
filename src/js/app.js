@@ -1,3 +1,4 @@
+import { HeroController } from "./hero_controller";
 import { Hill } from "./hill";
 
 class App {
@@ -7,10 +8,12 @@ class App {
         document.body.appendChild(this.canvas);
 
         this.hills = [
-            new Hill('#fd6bea', 0.2, 12),
-            new Hill('#ff59c2', 0.5, 8),
-            new Hill('#ff4674', 1.4, 6)
+            new Hill('#4D7798', 0.2, 12),
+            new Hill('#6598B8', 0.5, 8),
+            new Hill('#557FAA', 1.4, 6)
         ];
+        
+        this.heroController = new HeroController();
 
         window.addEventListener('resize', this.resize.bind(this), false);
         this.resize();
@@ -32,6 +35,8 @@ class App {
             this.hills[i].resize(this.stageWidth, this.stageHeight);
         }
 
+        this.heroController.resize(this.stageWidth, this.stageHeight);
+
     }
 
     animate(t) {
@@ -42,6 +47,8 @@ class App {
         for (let i = 0; i < this.hills.length; i++) {
             dots = this.hills[i].draw(this.ctx);
         } 
+
+        this.heroController.draw(this.ctx, t, dots);
     }
 }
 
