@@ -5,8 +5,14 @@
   "main": "index.js",
   "scripts": {
     "serve": "webpack serve --mode development",
-    "build": "webpack --mode production",
-    "deploy": "gh-pages -d dist"
+    "build2": "webpack --mode production",
+    "deploy": "gh-pages -d dist",
+
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "repository": {
     "type": "git",
@@ -26,6 +32,9 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "@nuxt/devtools": "latest",
+    "@types/node": "^18",
+    "nuxt": "^3.6.1",
     "copy-webpack-plugin": "^11.0.0",
     "html-webpack-plugin": "^5.5.3"
   }
