@@ -31,34 +31,34 @@
 </template>
 
 <script setup>
-import { useHead } from 'nuxt/app';
+// import { useHead } from 'nuxt/app';
 
-// import { definePageMeta } from 'nuxt/dist/pages/runtime';
-const route = useRoute();
+// // import { definePageMeta } from 'nuxt/dist/pages/runtime';
+// const route = useRoute();
 
-definePageMeta({
-    title: 'Boomin Kim',
-});
+// definePageMeta({
+//     title: 'Boomin Kim',
+// });
 
-useHead(() => {
-    return {
-        title: 'Boomin Kim',
-        meta: [
-            {
-                hid: 'description',
-                name: 'description',
-                content: 'Boomin Kim',
-            },
-        ],
-    };
-});
+// useHead(() => {
+//     return {
+//         title: 'Boomin Kim',
+//         meta: [
+//             {
+//                 hid: 'description',
+//                 name: 'description',
+//                 content: 'Boomin Kim',
+//             },
+//         ],
+//     };
+// });
 
 import('../assets/wave/app.js')
     .then(({ default: app }) => {
         new app();
     });
 
-console.log(route.meta.title) // My home page
+// console.log(route.meta.title) // My home page
 
 </script>
 
