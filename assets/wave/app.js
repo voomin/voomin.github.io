@@ -1,7 +1,7 @@
 import { HeroController } from "./hero_controller";
 import { Hill } from "./hill";
 
-class App {
+export default class App {
     constructor() {
         this.canvas = document.getElementById('canvas');
         this.ctx = this.canvas.getContext('2d');

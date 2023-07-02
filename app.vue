@@ -1,5 +1,6 @@
 <template>
   <div>
-    hello my name is boominkim
+    <!-- Markup shared across all pages, ex: NavBar -->
+    <NuxtPage />
   </div>
 </template>
