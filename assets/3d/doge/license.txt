@@ -1,0 +1,11 @@
+Model Information:
+* title:	Buff Doge
+* source:	https://sketchfab.com/3d-models/buff-doge-7789128dcc784612b478add581f07948
+* author:	Cyranek (https://sketchfab.com/cyranek)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Buff Doge" (https://sketchfab.com/3d-models/buff-doge-7789128dcc784612b478add581f07948) by Cyranek (https://sketchfab.com/cyranek) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

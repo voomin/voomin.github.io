@@ -5,7 +5,7 @@
 
         <nav>
             <a href="https://voomin.github.io/himke-web/">PROJECT</a>
-            <!-- <router-link to="/test">TEST</router-link> -->
+            <router-link to="/three">THREE</router-link>
         </nav>
     </header>
     <div class="text-wrap">

@@ -8,7 +8,6 @@
     "build2": "webpack --mode production",
     "deploy": "gh-pages -d dist",
     "deploy2": "push-dir --dir=dist --branch=gh-pages --cleanup",
-
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
@@ -35,8 +34,9 @@
   "dependencies": {
     "@nuxt/devtools": "latest",
     "@types/node": "^18",
-    "nuxt": "^3.6.1",
     "copy-webpack-plugin": "^11.0.0",
-    "html-webpack-plugin": "^5.5.3"
+    "html-webpack-plugin": "^5.5.3",
+    "nuxt": "^3.6.1",
+    "three": "^0.154.0"
   }
 }

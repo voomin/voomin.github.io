@@ -4,4 +4,10 @@ export default defineNuxtConfig({
   css: ['~/assets/css/reset.css'],
   pages: true,
   ssr: false,
+  app: {
+    head: {
+      charset: 'utf-8',
+      
+    }
+  }
 })
