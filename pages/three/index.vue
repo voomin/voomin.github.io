@@ -1,9 +1,7 @@
 <template>
-    <div>
-        <router-link to="/">index</router-link>
-
+    <NuxtLayout name="three">
         <canvas id="canvas"></canvas>
-    </div>
+    </NuxtLayout>
 </template>
 
 <script setup>
