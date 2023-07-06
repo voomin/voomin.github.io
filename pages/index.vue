@@ -1,10 +1,11 @@
 <template>
-  <div>
+  <div class="wrap">
     <header>
         <i class="icon"></i>
 
         <nav>
             <a href="https://voomin.github.io/himke-web/">PROJECT</a>
+            <!-- <router-link to="/test">TEST</router-link> -->
         </nav>
     </header>
     <div class="text-wrap">
@@ -31,52 +32,39 @@
 </template>
 
 <script setup>
-// import { useHead } from 'nuxt/app';
-
-// // import { definePageMeta } from 'nuxt/dist/pages/runtime';
-// const route = useRoute();
-
-// definePageMeta({
-//     title: 'Boomin Kim',
-// });
-
-// useHead(() => {
-//     return {
-//         title: 'Boomin Kim',
-//         meta: [
-//             {
-//                 hid: 'description',
-//                 name: 'description',
-//                 content: 'Boomin Kim',
-//             },
-//         ],
-//     };
-// });
+useHead({
+    title: 'Boomin Kim',
+    meta: [
+        {
+        hid: 'description',
+        name: 'description',
+        content: 'Boomin Kim'
+        }
+    ],
+    link: [
+        {
+            rel: 'icon',
+            type: 'image/x-icon',
+            href: '/favicon.ico'
+        }, {
+            rel: 'stylesheet',
+            href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
+        }
+    ]
+});
 
 import('../assets/wave/app.js')
-    .then(({ default: app }) => {
-        new app();
+    .then(({ default: App }) => {
+        const app = new App();
+
+        window.addEventListener('click', app.jump.bind(app));
+        window.addEventListener('pointerdown', app.jump.bind(app));
+
     });
-
-// console.log(route.meta.title) // My home page
-
 </script>
 
-<style>
-* {
-    outline: 0;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* font-family: 'Noto Sans KR', sans-serif; */
-}
-
-html {
-    width: 100%;
-    height: 100%;
-}
-
-body {
+<style scoped>
+.wrap {
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -98,6 +86,7 @@ header {
     align-items: center;
     padding: 20px;
     z-index: 1;
+    box-sizing: border-box;
 }
 
 .icon {

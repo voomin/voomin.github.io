@@ -5,7 +5,6 @@ export default class App {
     constructor() {
         this.canvas = document.getElementById('canvas');
         this.ctx = this.canvas.getContext('2d');
-        document.body.appendChild(this.canvas);
 
         this.hills = [
             new Hill('#4D7798', 0.2, 12),
@@ -55,17 +54,3 @@ export default class App {
         this.heroController.jump();
     }
 }
-
-let app;
-
-window.onload = () => {
-    app = new App();
-}
-
-function jump() {
-    if (!app) return;    
-    app.jump();
-}
-
-window.addEventListener('click', jump);
-window.addEventListener('pointerdown', jump);

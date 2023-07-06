@@ -1,8 +1,7 @@
 <template>
     <div>
 
-      about
-
+      test
       <router-link to="/">index</router-link>
     </div>
   </template>
